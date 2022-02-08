@@ -4,14 +4,14 @@
         <attribute name="name" value=""/>
         <attribute name="authors" value="User"/>
         <attribute name="about" value=""/>
-        <attribute name="saved" value="2022-02-06 07:36:54 "/>
+        <attribute name="saved" value="2022-02-08 12:24:34 "/>
         <attribute name="created" value="VXNlcjtERVNLVE9QLTBNNkFDUkg7MjAyMi0wMi0wNjsiMDM6Mjc6MDYgIjsyNjUw"/>
-        <attribute name="edited" value="VXNlcjtERVNLVE9QLTBNNkFDUkg7MjAyMi0wMi0wNjsiMDc6MzY6NTQgIjs2OzI3NzA="/>
+        <attribute name="edited" value="VXNlcjtERVNLVE9QLTBNNkFDUkg7MjAyMi0wMi0wODsiMTI6MjQ6MzQgIjsxMDsyODA2"/>
     </attributes>
     <function name="Main" type="None" variable="">
         <parameters/>
         <body>
-            <declare name="EmMat1, EmMat2, EmMat3, MedEmMat, MedEmMatPT, EnemMat, EnemHum, EnemNat, EnemLing, MedEnem, MedEnemPT, EnemMatPT" type="Real" array="False" size=""/>
+            <declare name="EmMat1, EmMat2, EmMat3, MedEmMat, MedEmMatPT" type="Real" array="False" size=""/>
             <output expression="&quot;Digite a m&#233;dia de Matem&#225;tica no 1&#186; ano do Ensino M&#233;dio&quot;" newline="True"/>
             <input variable="EmMat1"/>
             <output expression="&quot;Digite a m&#233;dia de Matem&#225;tica no 2&#186; ano do Ensino M&#233;dio&quot;" newline="True"/>
@@ -20,83 +20,78 @@
             <input variable="EmMat3"/>
             <assign variable="MedEmMat" expression="(EmMat1+EmMat2+EmMat3)/3"/>
             <output expression="&quot;Sua nota m&#233;dia de Matem&#225;tica no Ensino M&#233;dio &#233;: &quot;&amp;MedEmMat" newline="True"/>
-            <if expression="MedEmMat &gt;= 6.0">
+            <if expression="MedEmMat&gt;=6.0">
                 <then>
-                    <if expression="MedEmMat &lt; 6.2">
+                    <if expression="MedEmMat &gt;= 6.0 and MedEmMat &lt; 6.2">
                         <then>
                             <assign variable="MedEmMatPT" expression="10"/>
                         </then>
-                        <else>
-                            <if expression="MedEmMat &lt; 6.6">
-                                <then>
-                                    <assign variable="MedEmMatPT" expression="11"/>
-                                </then>
-                                <else>
-                                    <if expression="MedEmMat &lt; 7.0">
-                                        <then>
-                                            <assign variable="MedEmMatPT" expression="12"/>
-                                        </then>
-                                        <else>
-                                            <if expression="MedEmMat &lt; 7.4">
-                                                <then>
-                                                    <assign variable="MedEmMatPT" expression="13"/>
-                                                </then>
-                                                <else>
-                                                    <if expression="MedEmMat &lt; 7.8">
-                                                        <then>
-                                                            <assign variable="MedEmMatPT" expression="14"/>
-                                                        </then>
-                                                        <else>
-                                                            <if expression="MedEmMat &lt; 8.2">
-                                                                <then>
-                                                                    <assign variable="MedEmMatPT" expression="15"/>
-                                                                </then>
-                                                                <else>
-                                                                    <if expression="MedEmMat &lt; 8.6">
-                                                                        <then>
-                                                                            <assign variable="MedEmMatPT" expression="16"/>
-                                                                        </then>
-                                                                        <else>
-                                                                            <if expression="MedEmMat &lt; 9.0">
-                                                                                <then>
-                                                                                    <assign variable="MedEmMatPT" expression="17"/>
-                                                                                </then>
-                                                                                <else>
-                                                                                    <if expression="MedEmMat &lt; 9.4">
-                                                                                        <then>
-                                                                                            <assign variable="MedEmMatPT" expression="18"/>
-                                                                                        </then>
-                                                                                        <else>
-                                                                                            <if expression="MedEmMat &lt; 9.8">
-                                                                                                <then>
-                                                                                                    <assign variable="MedEmMatPT" expression="19"/>
-                                                                                                </then>
-                                                                                                <else>
-                                                                                                    <assign variable="MedEmMatPT" expression="20"/>
-                                                                                                </else>
-                                                                                            </if>
-                                                                                        </else>
-                                                                                    </if>
-                                                                                </else>
-                                                                            </if>
-                                                                        </else>
-                                                                    </if>
-                                                                </else>
-                                                            </if>
-                                                        </else>
-                                                    </if>
-                                                </else>
-                                            </if>
-                                        </else>
-                                    </if>
-                                </else>
-                            </if>
-                        </else>
+                        <else/>
+                    </if>
+                    <if expression="MedEmMat &gt;= 6.2 and MedEmMat &lt; 6.6">
+                        <then>
+                            <assign variable="MedEmMatPT" expression="11"/>
+                        </then>
+                        <else/>
+                    </if>
+                    <if expression="MedEmMat &gt;= 6.6 and MedEmMat &lt; 7.0">
+                        <then>
+                            <assign variable="MedEmMatPT" expression="12"/>
+                        </then>
+                        <else/>
+                    </if>
+                    <if expression="MedEmMat &gt;= 7.0 and MedEmMat &lt; 7.4">
+                        <then>
+                            <assign variable="MedEmMatPT" expression="13"/>
+                        </then>
+                        <else/>
+                    </if>
+                    <if expression="MedEmMat &gt;= 7.4 and MedEmMat &lt; 7.8">
+                        <then>
+                            <assign variable="MedEmMatPT" expression="14"/>
+                        </then>
+                        <else/>
+                    </if>
+                    <if expression="MedEmMat &gt;= 7.8 and MedEmMat &lt; 8.2">
+                        <then>
+                            <assign variable="MedEmMatPT" expression="15"/>
+                        </then>
+                        <else/>
+                    </if>
+                    <if expression="MedEmMat &gt;= 8.2 and MedEmMat &lt; 8.6">
+                        <then>
+                            <assign variable="MedEmMatPT" expression="16"/>
+                        </then>
+                        <else/>
+                    </if>
+                    <if expression="MedEmMat &gt;= 8.6 and MedEmMat &lt; 9.0">
+                        <then>
+                            <assign variable="MedEmMatPT" expression="17"/>
+                        </then>
+                        <else/>
+                    </if>
+                    <if expression="MedEmMat &gt;= 9.0 and MedEmMat &lt; 9.4">
+                        <then>
+                            <assign variable="MedEmMatPT" expression="18"/>
+                        </then>
+                        <else/>
+                    </if>
+                    <if expression="MedEmMat &gt;= 9.4 and MedEmMat &lt; 9.8">
+                        <then>
+                            <assign variable="MedEmMatPT" expression="19"/>
+                        </then>
+                        <else/>
+                    </if>
+                    <if expression="MedEmMat &gt;= 9.8 and MedEmMat &lt; 10.0">
+                        <then>
+                            <assign variable="MedEmMatPT" expression="20"/>
+                        </then>
+                        <else/>
                     </if>
                     <output expression="&quot;Sua nota m&#233;dia de Matem&#225;tica no Ensino M&#233;dio na escala portuguesa &#233;: &quot;&amp;MedEmMatPT" newline="True"/>
                 </then>
                 <else>
-                    <output expression="&quot;Desculpe, esta n&#227;o &#233; uma nota de aprova&#231;&#227;o.&#13;&#10;Repita a opera&#231;&#227;o.&quot;" newline="True"/>
+                    <output expression="&quot;Essa n&#227;o &#233; uma nota de aprova&#231;&#227;o. Tente novamente.&quot;" newline="True"/>
                 </else>
             </if>
         </body>
